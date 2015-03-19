@@ -5,9 +5,15 @@ import java.util.HashMap;
 
 public class ArgumentParser {
 	
-    private HashMap<String, PositionalArgument> positionalArguments = new HashMap<>();
-    private HashMap<String, OptionalArgument> optionalArguments = new HashMap<>();
-	private HashMap<String, String> optionalArgumentShortNames = new HashMap<>();
+    private Map<String, PositionalArgument> 
+    private Map<String, OptionalArgument> optionalArguments;
+	private Map<String, String> optionalArgumentShortNames;
+	
+	public ArgumentParser() {
+		positionalArguments = new HashMap<>();
+		optionalArguments = new HashMap<>();
+		optionalArgumentsShortNames = new HashMap<>();
+	}
     
     public void addPositionalArgument(String name) {
         positionalArguments.put(name, new PositionalArgument(name));
