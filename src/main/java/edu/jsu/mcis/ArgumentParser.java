@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class ArgumentParser {
 	
-    private Map<String, PositionalArgument> 
+    private Map<String, PositionalArgument> positionalArguments;
     private Map<String, OptionalArgument> optionalArguments;
 	private Map<String, String> optionalArgumentShortNames;
 	
